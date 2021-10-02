@@ -1,0 +1,18 @@
+{% extends "authenticate/base.html" %}
+
+{% block content %}
+<h1>Welcome!</h1>
+<p class="font-weight-bold">This is home page</p>
+
+
+{% if request.user.is_authenticated %} 
+<strong>
+    <p>Fullname: {{user.first_name}} {{user.last_name}}</p>
+    <p>Email: {{user.email}}</p>
+    <p>Username: {{user.username}}</p></strong>
+
+{% endif %}
+<img src="static/computer-family-computer.gif">
+
+
+{% endblock %}

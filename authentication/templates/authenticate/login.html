@@ -1,0 +1,26 @@
+{% extends "authenticate/base.html" %}
+
+{% block content %}
+    
+<div class="text-center">
+    <h2> Login</h2>
+</div>
+
+<br/>
+<div class="col-md-3 offset-md-5">
+    <form method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username" name="username">
+        </div>
+
+        <div class="mb-3">
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+        </div>
+    
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+ 
+{% endblock %}
+
